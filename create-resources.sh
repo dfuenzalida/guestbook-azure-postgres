@@ -27,7 +27,8 @@ az postgres server create \
     --sku-name B_Gen5_1 \
     --storage-size 5120 \
     --admin-user $AZ_POSTGRESQL_USERNAME \
-    --admin-password $AZ_POSTGRESQL_PASSWORD
+    --admin-password $AZ_POSTGRESQL_PASSWORD \
+    --version 11
 
 # OPTIONAL IF YOU WANT TO CREATE A FIREWALL EXCEPTION FOR YOUR OWN IP ADDRESS
 # echo "Create a firewall exception for your own IP address"
