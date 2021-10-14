@@ -97,13 +97,13 @@ Wrote .../guestbook/pom.xml
 Run the following command line to use a Maven plugin which will detect and configure most of the parameters required for deployment:
 
 ```
-mvn com.microsoft.azure:azure-webapp-maven-plugin:1.12.0:config
+mvn com.microsoft.azure:azure-webapp-maven-plugin:2.0.0:config
 ```
 
 The command above will prompt you to create a new Web App or to use an existing one. Choose the option `2` to use the existing Web App that you created in the previous step using the script:
 
 ```
-$ mvn com.microsoft.azure:azure-webapp-maven-plugin:1.12.0:config
+$ mvn com.microsoft.azure:azure-webapp-maven-plugin:2.0.0:config
 [INFO] Scanning for projects...
 ...
 [INFO] Auth Type : AZURE_CLI, Auth Files : [/home/user/.azure/azureProfile.json, /home/user/.azure/accessTokens.json]
@@ -187,17 +187,16 @@ $ mvn azure-webapp:deploy
 [INFO] Building guestbook 0.1.0-SNAPSHOT
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
-[INFO] --- azure-webapp-maven-plugin:1.12.0:deploy (default-cli) @ guestbook ---
+[INFO] --- azure-webapp-maven-plugin:2.0.0:deploy (default-cli) @ guestbook ---
 ...
 [INFO] Trying to deploy artifact to guestbook-25026...
-...
-[INFO] Deploying the zip package guestbook-25026-12942277-8985-4885-ad44-697bc5ddf2e33768676185274727327.zip...
+[INFO] Deploying (/.../guestbook/target/uberjar/guestbook.jar)[jar]  ...
 [INFO] Successfully deployed the artifact to https://guestbook-25026.azurewebsites.net
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  01:27 min
-[INFO] Finished at: 2021-02-28T14:36:09-08:00
+[INFO] Total time:  27.655 s
+[INFO] Finished at: 2021-10-13T23:49:22-07:00
 [INFO] ------------------------------------------------------------------------
 ```
 
